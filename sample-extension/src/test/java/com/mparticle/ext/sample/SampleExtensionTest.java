@@ -8,16 +8,17 @@ import org.junit.jupiter.api.Test;
 /**
  * Tests are fun! Here's an empty test class to get you started.
  *
- * These tests can be run by executing the 'test' gradle task via `./gradlew test`
+ * These tests can be run by executing the 'test' gradle task via `./gradlew
+ * test`
  */
-public class SampleExtensionTest  {
-
+public class SampleExtensionTest {
     MessageSerializer serializer = new MessageSerializer();
 
     @Test
     public void testProcessRegistrationRequest() throws Exception {
         SampleExtension sampleExtension = new SampleExtension();
-        ModuleRegistrationResponse response = sampleExtension.processRegistrationRequest(new ModuleRegistrationRequest());
+        ModuleRegistrationResponse response = sampleExtension
+                .processRegistrationRequest(new ModuleRegistrationRequest());
         System.out.println();
         System.out.println("Please send this JSON to mParticle:");
         System.out.println();
